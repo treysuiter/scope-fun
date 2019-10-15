@@ -17,19 +17,50 @@
 // console.log(conjoinedWord)
 
 
-const ModSquad = {
-    "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"],
-        "series": {
-        "start": "1968",
-        "end": "1973"
+// const ModSquad = {
+//     "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"],
+//         "series": {
+//         "start": "1968",
+//         "end": "1973"
+//     }
+// }
+
+// let HTMLRepresentation = `<h1>The Mod Squad</h1>`
+
+// ModSquad.members.forEach (member => {
+//     HTMLRepresentation += `<div>${member}</div>`
+// })
+
+
+// document.querySelector(".show-info").innerHTML = HTMLRepresentation
+
+const locations = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3], [3,0]]
+
+let invalidLocation = false
+
+let invalidCount = 0
+
+for (let k = 0; k < locations.length; k++) {
+   
+    let currentLocation = locations[k]
+
+    if (currentLocation[0] > 2) {
+        invalidLocation = true
+    }
+
+    if (invalidLocation) {
+        invalidCount++
+        console.log("This location is invalid")
     }
 }
 
-let HTMLRepresentation = `<h1>The Mod Squad</h1>`
+/*
+    Since k is used as the loop counter, it will be the
+    total number of locations, not the invalid ones. You
+    need to fix this somehow.
+*/
+console.log(`There were ${invalidCount} invalid locations`)
 
-ModSquad.members.forEach (member => {
-    HTMLRepresentation += `<div>${member}</div>`
-})
+const testArray = [1, 2][0]
 
-
-document.querySelector(".show-info").innerHTML = HTMLRepresentation
+console.log(testArray)
